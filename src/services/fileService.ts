@@ -1,11 +1,29 @@
+import { promises as fsPromises } from "fs";
+import axios from "axios";
 import { FileData } from "../models/fileModel";
-import * as fs from "fs";
 
 class FileService {
-  public async readFile(path: string): Promise<string> {
-    return await fs.promises.readFile(path, "utf-8");
+  public async readFileFromUrl(url: string): Promise<string> {
+    try {
+      const response = await axios.get(url);
+      if (response.status !== 200) {
+        throw new Error(
+          `Failed to fetch file from URL: ${response.statusText}`
+        );
+      }
+      return response.data;
+    } catch (error: any) {
+      throw new Error(`Unable to fetch file from URL: ${error.message}`);
+    }
   }
-
+  // Metodo per leggere il contenuto di un file localmente
+  public async readFile(path: string): Promise<string> {
+    try {
+      return await fsPromises.readFile(path, "utf-8");
+    } catch (error) {
+      throw new Error(`Unable to read file: ${(error as Error).message}`);
+    }
+  }
   public analyzeFile(content: string): FileData {
     if (content.trim() === "") {
       return {
@@ -16,26 +34,18 @@ class FileService {
           0
         ),
         frequentWords: {},
-      };
+      } as FileData;
     }
 
-    // Conteggio parole
+    // Conteggio parole, lettere, spazi e parole frequenti (>10 ripetizioni)
     const words = content.trim().split(/\s+/);
-    // Filtrare le parole contenenti solo caratteri speciali
     const filteredWords = words.filter((word) => !/^[^a-zA-Z]+$/.test(word));
     const totalWords = filteredWords.length;
-
-    // Conteggio lettere
     const totalLetters = content.replace(/[^a-zA-Z]/g, "").length;
-
-    // Conteggio spazi
     const totalSpaces = (content.match(/ +/g) || []).reduce(
       (acc, match) => acc + match.length,
       0
     );
-
-    // Conteggio parole frequenti (>10 ripetizioni)
-    // Conteggio parole frequenti (>10 ripetizioni)
     const wordCount: { [key: string]: number } = {};
     words.forEach((word) => {
       const normalizedWord = word.toLowerCase();
@@ -43,14 +53,13 @@ class FileService {
         wordCount[normalizedWord] = (wordCount[normalizedWord] || 0) + 1;
       }
     });
-    console.log(wordCount, "wordCount");
     const frequentWords: { [key: string]: number } = {};
     for (const word in wordCount) {
       if (wordCount[word] > 10) {
         frequentWords[word] = wordCount[word];
       }
     }
-    console.log(frequentWords, "frequentWords");
+
     return {
       totalWords,
       totalLetters,
