@@ -167,25 +167,26 @@ Ora l'applicazione dovrebbe essere in esecuzione sul computer locale. Assicurars
   <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
 </p>
 <p align="center">
-    <h1 align="center">README-AI-STREAMLIT</h1>
+    <h1 align="center">TEXTANALYZERMVC</h1>
 </p>
 <p align="center">
     <em>HTTP error 401 for prompt `slogan`</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/eli64s/readme-ai-streamlit?style=flat&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/eli64s/readme-ai-streamlit?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/eli64s/readme-ai-streamlit?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/eli64s/readme-ai-streamlit?style=flat&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/github/license/boobaGreen/TextAnalyzerMVC?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/boobaGreen/TextAnalyzerMVC?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/boobaGreen/TextAnalyzerMVC?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/boobaGreen/TextAnalyzerMVC?style=flat&color=0080ff" alt="repo-language-count">
 <p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
-	<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat&logo=Streamlit&logoColor=white" alt="Streamlit">
-	<img src="https://img.shields.io/badge/Poetry-60A5FA.svg?style=flat&logo=Poetry&logoColor=white" alt="Poetry">
-	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/Jest-C21325.svg?style=flat&logo=Jest&logoColor=white" alt="Jest">
+	<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat&logo=Axios&logoColor=white" alt="Axios">
+	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white" alt="TypeScript">
+	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
 </p>
 <hr>
 
@@ -197,7 +198,7 @@ Ora l'applicazione dovrebbe essere in esecuzione sul computer locale. Assicurars
 > - [ Modules](#-modules)
 > - [ Getting Started](#-getting-started)
 >   - [ Installation](#-installation)
->   - [ Running readme-ai-streamlit](#-running-readme-ai-streamlit)
+>   - [ Running TextAnalyzerMVC](#-running-TextAnalyzerMVC)
 >   - [ Tests](#-tests)
 > - [ Project Roadmap](#-project-roadmap)
 > - [ Contributing](#-contributing)
@@ -221,22 +222,27 @@ HTTP error 401 for prompt `features`
 ## Repository Structure
 
 ```sh
-└── readme-ai-streamlit/
-    ├── LICENSE
-    ├── Makefile
-    ├── README.md
-    ├── poetry.lock
-    ├── pyproject.toml
-    ├── scripts
-    │   └── clean.sh
+└── TextAnalyzerMVC/
+    ├── Prova tecnica - Backend.pdf
+    ├── jest.config.js
+    ├── package-lock.json
+    ├── package.json
+    ├── readme.md
+    ├── readmeOld.md
+    ├── sample.txt
     ├── src
-    │   ├── __init__.py
-    │   ├── app.py
-    │   ├── cli.py
-    │   └── utils.py
-    └── tests
-        ├── __init__.py
-        └── conftest.py
+    │   ├── app.ts
+    │   ├── controllers
+    │   │   └── fileController.ts
+    │   ├── models
+    │   │   └── fileModel.ts
+    │   ├── services
+    │   │   └── fileService.ts
+    │   ├── tests
+    │   │   └── fileService.test.ts
+    │   └── views
+    │       └── fileView.ts
+    └── tsconfig.json
 ```
 
 ---
@@ -245,29 +251,53 @@ HTTP error 401 for prompt `features`
 
 <details closed><summary>.</summary>
 
-| File                                                                                       | Summary                                    |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| [poetry.lock](https://github.com/eli64s/readme-ai-streamlit/blob/master/poetry.lock)       | HTTP error 401 for prompt `poetry.lock`    |
-| [Makefile](https://github.com/eli64s/readme-ai-streamlit/blob/master/Makefile)             | HTTP error 401 for prompt `Makefile`       |
-| [pyproject.toml](https://github.com/eli64s/readme-ai-streamlit/blob/master/pyproject.toml) | HTTP error 401 for prompt `pyproject.toml` |
-
-</details>
-
-<details closed><summary>scripts</summary>
-
-| File                                                                                   | Summary                                      |
-| -------------------------------------------------------------------------------------- | -------------------------------------------- |
-| [clean.sh](https://github.com/eli64s/readme-ai-streamlit/blob/master/scripts/clean.sh) | HTTP error 401 for prompt `scripts/clean.sh` |
+| File                                                                                             | Summary                                       |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
+| [sample.txt](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/sample.txt)               | HTTP error 401 for prompt `sample.txt`        |
+| [tsconfig.json](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/tsconfig.json)         | HTTP error 401 for prompt `tsconfig.json`     |
+| [package.json](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/package.json)           | HTTP error 401 for prompt `package.json`      |
+| [jest.config.js](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/jest.config.js)       | HTTP error 401 for prompt `jest.config.js`    |
+| [package-lock.json](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/package-lock.json) | HTTP error 401 for prompt `package-lock.json` |
 
 </details>
 
 <details closed><summary>src</summary>
 
-| File                                                                               | Summary                                  |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- |
-| [utils.py](https://github.com/eli64s/readme-ai-streamlit/blob/master/src/utils.py) | HTTP error 401 for prompt `src/utils.py` |
-| [cli.py](https://github.com/eli64s/readme-ai-streamlit/blob/master/src/cli.py)     | HTTP error 401 for prompt `src/cli.py`   |
-| [app.py](https://github.com/eli64s/readme-ai-streamlit/blob/master/src/app.py)     | HTTP error 401 for prompt `src/app.py`   |
+| File                                                                           | Summary                                |
+| ------------------------------------------------------------------------------ | -------------------------------------- |
+| [app.ts](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/src/app.ts) | HTTP error 401 for prompt `src/app.ts` |
+
+</details>
+
+<details closed><summary>src.services</summary>
+
+| File                                                                                                    | Summary                                                 |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| [fileService.ts](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/src/services/fileService.ts) | HTTP error 401 for prompt `src/services/fileService.ts` |
+
+</details>
+
+<details closed><summary>src.models</summary>
+
+| File                                                                                              | Summary                                             |
+| ------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| [fileModel.ts](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/src/models/fileModel.ts) | HTTP error 401 for prompt `src/models/fileModel.ts` |
+
+</details>
+
+<details closed><summary>src.controllers</summary>
+
+| File                                                                                                             | Summary                                                       |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [fileController.ts](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/src/controllers/fileController.ts) | HTTP error 401 for prompt `src/controllers/fileController.ts` |
+
+</details>
+
+<details closed><summary>src.views</summary>
+
+| File                                                                                           | Summary                                           |
+| ---------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [fileView.ts](https://github.com/boobaGreen/TextAnalyzerMVC/blob/master/src/views/fileView.ts) | HTTP error 401 for prompt `src/views/fileView.ts` |
 
 </details>
 
@@ -279,34 +309,34 @@ HTTP error 401 for prompt `features`
 
 Ensure you have the following dependencies installed on your system:
 
-- **Python**: `version x.y.z`
+- **TypeScript**: `version x.y.z`
 
 ### Installation
 
-1. Clone the readme-ai-streamlit repository:
+1. Clone the TextAnalyzerMVC repository:
 
 ```sh
-git clone https://github.com/eli64s/readme-ai-streamlit
+git clone https://github.com/boobaGreen/TextAnalyzerMVC
 ```
 
 2. Change to the project directory:
 
 ```sh
-cd readme-ai-streamlit
+cd TextAnalyzerMVC
 ```
 
 3. Install the dependencies:
 
 ```sh
-pip install -r requirements.txt
+npm install
 ```
 
-### Running readme-ai-streamlit
+### Running TextAnalyzerMVC
 
-Use the following command to run readme-ai-streamlit:
+Use the following command to run TextAnalyzerMVC:
 
 ```sh
-python main.py
+npm run build && node dist/main.js
 ```
 
 ### Tests
@@ -314,7 +344,7 @@ python main.py
 To execute tests, run:
 
 ```sh
-pytest
+npm test
 ```
 
 ---
@@ -331,9 +361,9 @@ pytest
 
 Contributions are welcome! Here are several ways you can contribute:
 
-- **[Submit Pull Requests](https://github.com/eli64s/readme-ai-streamlit/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-- **[Join the Discussions](https://github.com/eli64s/readme-ai-streamlit/discussions)**: Share your insights, provide feedback, or ask questions.
-- **[Report Issues](https://github.com/eli64s/readme-ai-streamlit/issues)**: Submit bugs found or log feature requests for Readme-ai-streamlit.
+- **[Submit Pull Requests](https://github.com/boobaGreen/TextAnalyzerMVC/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/boobaGreen/TextAnalyzerMVC/discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github.com/boobaGreen/TextAnalyzerMVC/issues)**: Submit bugs found or log feature requests for Textanalyzermvc.
 
 <details closed>
     <summary>Contributing Guidelines</summary>
@@ -341,7 +371,7 @@ Contributions are welcome! Here are several ways you can contribute:
 1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
    ```sh
-   git clone https://github.com/eli64s/readme-ai-streamlit
+   git clone https://github.com/boobaGreen/TextAnalyzerMVC
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
