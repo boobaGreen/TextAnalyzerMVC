@@ -1,54 +1,32 @@
-# TextAnalyzerCLI
+# TextAnalyzerMVC
 
-## Description
+## Requisiti dell'Applicazione
 
-TextAnalyzerCLI is a Node.js application designed to analyze text files, providing detailed statistics such as the total number of words, letters, spaces, and words repeated more than 10 times.
+### Richieste
 
-### Choice of MVC Architecture
+**A**: L'applicazione deve essere in grado di leggere un file da un percorso inserito in input dall’utente, che può essere un percorso locale o un indirizzo web.
+**B**: L'applicazione deve determinare il numero totale di parole nel file.
+**C**: L'applicazione deve calcolare il numero totale di lettere nel file.
+**D**: L'applicazione deve identificare e contare il numero totale di spazi nel file, inclusi spazi consecutivi.
+**E**: L'applicazione deve individuare le parole che si ripetono più di 10 volte nel testo (ma non esattamente 10 volte) e indicare il numero di volte in cui si ripetono.
 
-#### Separation of Concerns
+### Decisioni e Spiegazioni
 
-The MVC architecture was chosen for its ability to clearly separate responsibilities within the application, ensuring an organized and easily maintainable structure. The main components of MVC are:
+Durante lo sviluppo dell'applicazione, abbiamo dovuto prendere diverse decisioni per garantire il corretto funzionamento e l'adempimento dei requisiti. Ecco alcune delle scelte chiave fatte:
 
-- **Model**: Represents the data and logic of the application.
-- **View**: Handles the presentation of data to the user.
-- **Controller**: Manages user interactions and coordinates actions between Model and View.
+- Inclusione dei Caratteri Speciali e degli Emoji : Abbiamo deciso di includere i caratteri speciali, come emoji e simboli, nel conteggio delle parole. Questa scelta riflette l'uso moderno dei testi e garantisce una rappresentazione accurata del testo.
+- Metodo di Conteggio delle Parole : Abbiamo implementato un algoritmo per contare le parole nel testo, inclusi gli spazi consecutivi. Questo approccio offre una misurazione precisa del numero di parole e degli spazi totali.
 
-#### Advantages of MVC Architecture
+- Conteggio delle Parole Ripetute : Abbiamo sviluppato un algoritmo per individuare e contare le parole che si ripetono più di 10 volte (ma non esattamente 10 volte) nel testo. Questo ci consente di identificare le parole più comuni e significative nel testo.
 
-- **Modularity**: Breaking the application into three distinct components allows for greater code modularity, facilitating maintenance and testing.
-- **Reusability**: MVC components can be reused in other parts of the application or in future projects.
-- **Scalability**: The MVC architecture promotes scalability of the application, allowing for more efficient management of growth and change requirements over time.
+-Considerazione delle Parole in Maiuscolo e Minuscolo come Uguali : Abbiamo deciso di considerare le parole in maiuscolo e minuscolo come equivalenti nel conteggio delle parole ripetute. Questo assicura una corretta identificazione delle parole ripetute indipendentemente dalla loro formattazione.
 
-### Choice of Handling Text Files (.txt)
+## Esempi
 
-#### Universality
-
-Text files (.txt) were chosen as the primary format for textual input due to their universality. They can be opened and read by any text editor or word processing program, ensuring greater accessibility for users.
-
-#### Simplicity
-
-Handling text files is simpler compared to other formats like HTML, JSON, or XML. It does not require complex analysis or parsing and can be treated directly as a text string, simplifying the analysis process within the application.
-
-#### Compliance with Requirements
-
-The provided specifications do not mention any need to handle other file types besides text files. Therefore, focusing exclusively on text files allows us to meet the provided requirements without adding unnecessary complexity to the application.
-
-#### Adaptability
-
-If there are future requirements or specifications that necessitate handling other file formats, the application could be extended to support those formats. However, at present, the choice to focus on text files allows us to keep the application simple and efficient, focusing on the core functionalities required.
-
-## Installation
-
-To install the application, follow these steps:
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/TextAnalyzerCLI.git
-
-# Navigate to the project directory
-cd TextAnalyzerCLI
-
-# Install dependencies
-npm install
-```
+- Testo Standard**: "Hello world! How are you?" viene suddiviso in 5 parole: "Hello", "world!", "How", "are", "you?".
+- Testo con Caratteri Speciali**: "I ❤️ coding!" viene considerato come 3 parole: "I", "❤️", "coding!".
+- Testo con Sequenze di Caratteri Speciali**: "👋🏼Hello!👋🏼" viene considerato come 3 parole: "👋🏼Hello!👋🏼".
+- Testo con Parole in Maiuscolo e Minuscolo: "Hello hello World world WORlD" viene considerato come 2 parole uniche: "hello" (ripetuta 2 volte) e "world" (ripetuta 2 volte).
+- Testo con Sequenze di Caratteri Speciali e Maiuscolo: "HELLO! hello hello" viene considerato come 1 parola unica: "hello" (ripetuta 3 volte).
+- Testo con Parole Completamente in Maiuscolo e Minuscolo: "HELLO hello hello" viene considerato come 1 parola unica: "hello" (ripetuta 3 volte).
+- Testo con Caratteri Speciali e Maiuscolo: "HeLLo! WOrld! hello" viene considerato come 2 parole uniche: "hello" (ripetuta 2 volte) e "world" (ripetuta 1 volta).
