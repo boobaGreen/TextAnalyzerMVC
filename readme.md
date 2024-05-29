@@ -34,8 +34,8 @@
 > - [🛠 MVC Architecture](#mvc-architecture)
 > - [🚀 Getting Started](#getting-started)
 >   - [⚙️ Installation](#installation)
->   - [👏 Running TextAnalyzerMVC](#running-textanalyzermvc)
 >   - [🤝 Typescript compile](#typescript-compile)
+>   - [👏 Running TextAnalyzerMVC](#running-textanalyzermvc)
 >   - [🧪 Tests](#tests)
 > - [📄License](#license)
 
@@ -318,7 +318,7 @@ cd TextAnalyzerMVC
 npm install
 ```
 
-### Typescript compile
+### 🤝 Typescript compile
 
 Use the following command to compile:
 
