@@ -25,17 +25,17 @@
 
 ## Quick Links
 
-> - [📍 Overview](#-overview)
-> - [📦 Features](#-features)
-> - [📂 Repository Structure](#-repository-structure)
-> - [🧩 Modules](#-modules)
-> - [🛠 MVC Architecture](-mvc-architecture)
-> - [🚀 Getting Started](#-getting-started)
->   - [⚙️ Installation](#-installation)
->   - [🤝 Typescript compile](#-typescript-compile)
->   - [👏 Running TextAnalyzerMVC](#-running-textanalyzermvc)
->   - [🧪 Tests](#-tests)
-> - [📄License](#-license)
+> - [📍 Overview](#overview)
+> - [📦 Features](#features)
+> - [📂 Repository Structure](#repository-structure)
+> - [🧩 Modules](#modules)
+> - [🛠 MVC Architecture](#mvc-architecture)
+> - [🚀 Getting Started](#getting-started)
+>   - [⚙️ Installation](#installation)
+>   - [🤝 Typescript compile](#typescript-compile)
+>   - [👏 Running TextAnalyzerMVC](#running-textanalyzermvc)
+>   - [🧪 Tests](#tests)
+> - [📄License](#license)
 
 ---
 
