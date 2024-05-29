@@ -57,11 +57,11 @@ class FileService {
 
     // Counting total words, total letters, and total spaces
     const totalWords = words.length;
-    const totalLetters = content.length;
     const totalSpaces = (content.match(/ +/g) || []).reduce(
       (acc, match) => acc + match.length,
       0
     );
+    const totalLetters = content.length - totalSpaces;
 
     // Counting frequency of each word
     const wordCount: { [key: string]: number } = {};

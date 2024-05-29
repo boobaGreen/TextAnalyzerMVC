@@ -338,7 +338,7 @@ node dist/main.js
 To execute tests, run:
 
 ```sh
-npm test
+npm run test
 ```
 
 This format provides a clear and structured guide to getting started with the application, ensuring all necessary steps and dependencies are covered.

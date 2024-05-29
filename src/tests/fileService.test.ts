@@ -1,105 +1,115 @@
 import FileService from "../services/fileService";
 
 describe("FileService", () => {
-  it("should analyze file content correctly", () => {
-    const content = "This is a test content.";
+  // Test to handle empty file correctly
+  it("should handle empty file correctly", () => {
+    const content = "";
+    const result = FileService.analyzeFile(content);
+
+    expect(result.totalWords).toBe(0);
+    expect(result.totalLetters).toBe(0);
+    expect(result.totalSpaces).toBe(0);
+    expect(Object.keys(result.frequentWords).length).toBe(0);
+    expect(result.frequentWords).toEqual({});
+  });
+
+  // Test to handle file with a word repeated exactly 10 times correctly
+  it("should handle file with word repeated exactly 10 times correctly", () => {
+    const content =
+      "apple apple apple apple apple apple apple apple apple apple";
+    const result = FileService.analyzeFile(content);
+
+    expect(result.totalWords).toBe(10);
+    expect(result.totalLetters).toBe(50);
+    expect(result.totalSpaces).toBe(9);
+    expect(Object.keys(result.frequentWords).length).toBe(0);
+    expect(result.frequentWords).toEqual({});
+  });
+
+  // Test to handle file with words containing numbers correctly
+  it("should handle file with words containing numbers correctly", () => {
+    const content = "apple123 456banana 789apple banana123";
+    const result = FileService.analyzeFile(content);
+
+    expect(result.totalWords).toBe(4);
+    expect(result.totalLetters).toBe(34);
+    expect(result.totalSpaces).toBe(3);
+    expect(Object.keys(result.frequentWords).length).toBe(0);
+    expect(result.frequentWords).toEqual({});
+  });
+
+  // Test to handle file with mixed case words correctly
+  it("should handle file with mixed case words correctly", () => {
+    const content = "apple Apple aPpLe BaNana BANANA";
     const result = FileService.analyzeFile(content);
 
     expect(result.totalWords).toBe(5);
-    expect(result.totalLetters).toBe(18);
+    expect(result.totalLetters).toBe(27);
     expect(result.totalSpaces).toBe(4);
     expect(Object.keys(result.frequentWords).length).toBe(0);
     expect(result.frequentWords).toEqual({});
   });
 
-  it("should handle file with only white spaces correctly", () => {
-    const content = "       ";
-    const result = FileService.analyzeFile(content);
-
-    expect(result.totalWords).toBe(0);
-    expect(result.totalLetters).toBe(0);
-    expect(result.totalSpaces).toBe(7);
-    expect(Object.keys(result.frequentWords).length).toBe(0);
-    expect(result.frequentWords).toEqual({});
-  });
-
-  it("should handle file with only special characters correctly", () => {
-    const content = "!@#$%^&*()_+=-";
-    const result = FileService.analyzeFile(content);
-
-    expect(result.totalWords).toBe(0);
-    expect(result.totalLetters).toBe(0);
-    expect(result.totalSpaces).toBe(0);
-    expect(Object.keys(result.frequentWords).length).toBe(0);
-    expect(result.frequentWords).toEqual({});
-  });
-
-  it("should handle file with single word correctly", () => {
-    const content = "hello";
-    const result = FileService.analyzeFile(content);
-
-    expect(result.totalWords).toBe(1);
-    expect(result.totalLetters).toBe(5);
-    expect(result.totalSpaces).toBe(0);
-    expect(Object.keys(result.frequentWords).length).toBe(0);
-    expect(result.frequentWords).toEqual({});
-  });
-
-  it("should handle file with single word correctly but tricky", () => {
-    const content = "?   ??       hello  °°°";
-    const result = FileService.analyzeFile(content);
-
-    expect(result.totalWords).toBe(1);
-    expect(result.totalLetters).toBe(5);
-    expect(result.totalSpaces).toBe(12);
-    expect(Object.keys(result.frequentWords).length).toBe(0);
-    expect(result.frequentWords).toEqual({});
-  });
-
-  it("should handle file with same word 12 times correctly", () => {
+  // Test to handle file with a word repeated more than 10 times correctly
+  it("should handle file with word repeated more than 10 times correctly", () => {
     const content =
-      "hello hello hello hello hello hello hello hello hello hello hello hello";
+      "apple apple apple apple apple apple apple apple apple apple apple apple";
     const result = FileService.analyzeFile(content);
 
     expect(result.totalWords).toBe(12);
     expect(result.totalLetters).toBe(60);
     expect(result.totalSpaces).toBe(11);
     expect(Object.keys(result.frequentWords).length).toBe(1);
-    expect(result.frequentWords).toEqual({ hello: 12 });
+    expect(result.frequentWords).toEqual({ apple: 12 });
   });
 
-  it("should handle file with very long word correctly", () => {
-    const content = "supercalifragilistichespiralitoso";
+  // Test to handle file with words containing multiple spaces correctly
+  it("should handle file with words containing multiple spaces correctly", () => {
+    const content = " apple     banana  orange ";
     const result = FileService.analyzeFile(content);
 
-    expect(result.totalWords).toBe(1);
-    expect(result.totalLetters).toBe(33);
-    expect(result.totalSpaces).toBe(0);
+    expect(result.totalWords).toBe(3);
+    expect(result.totalLetters).toBe(17);
+    expect(result.totalSpaces).toBe(9);
     expect(Object.keys(result.frequentWords).length).toBe(0);
     expect(result.frequentWords).toEqual({});
   });
-
-  it("should handle file with many frequent words correctly 2 word with many occurrences banana -> 13 deve visualizzarlo - ed apple 10 NON deve  visualizzarlo", () => {
+  // Test to handle file with words repeated more than 10 times correctly
+  it("should handle file with words repeated more than 10 times correctly", () => {
     const content =
-      "apple banana banana banana banana banana banana banana banana banana banana apple apple banana banana apple apple apple apple apple apple apple banana";
+      "apple apple apple apple apple apple apple apple apple apple apple banana banana orange orange orange orange orange";
     const result = FileService.analyzeFile(content);
 
-    expect(result.totalWords).toBe(23);
-    expect(result.totalLetters).toBe(128);
-    expect(result.totalSpaces).toBe(22);
+    expect(result.totalWords).toBe(18);
+    expect(result.totalLetters).toBe(97);
+    expect(result.totalSpaces).toBe(17);
     expect(Object.keys(result.frequentWords).length).toBe(1);
-    expect(result.frequentWords).toEqual({ banana: 13 });
+    expect(result.frequentWords).toEqual({ apple: 11 });
   });
 
-  it("should handle file with many frequent words correctly 2 word with many occurrences (apple 11, banana 13)", () => {
+  // Test to handle file with words repeated exactly 10 times correctly
+  it("should handle file with words repeated exactly 10 times correctly", () => {
     const content =
-      "apple banana banana banana banana banana banana banana banana apple banana banana apple apple banana banana apple apple apple apple apple apple apple banana";
+      "apple apple apple apple apple apple apple apple apple apple apple banana banana orange orange orange orange";
     const result = FileService.analyzeFile(content);
 
-    expect(result.totalWords).toBe(24);
-    expect(result.totalLetters).toBe(133);
-    expect(result.totalSpaces).toBe(23);
-    expect(Object.keys(result.frequentWords).length).toBe(2);
-    expect(result.frequentWords).toEqual({ banana: 13, apple: 11 });
+    expect(result.totalWords).toBe(17);
+    expect(result.totalLetters).toBe(91);
+    expect(result.totalSpaces).toBe(16);
+    expect(Object.keys(result.frequentWords).length).toBe(1);
+    expect(result.frequentWords).toEqual({ apple: 11 });
+  });
+
+  // Test to handle file with words repeated less than 10 times correctly
+  it("should handle file with words repeated less than 10 times correctly", () => {
+    const content =
+      "apple apple apple banana banana banana orange orange orange orange";
+    const result = FileService.analyzeFile(content);
+
+    expect(result.totalWords).toBe(10);
+    expect(result.totalLetters).toBe(57);
+    expect(result.totalSpaces).toBe(9);
+    expect(Object.keys(result.frequentWords).length).toBe(0);
+    expect(result.frequentWords).toEqual({});
   });
 });

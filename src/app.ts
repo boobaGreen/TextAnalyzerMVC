@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 });
 
 // Asking the user to enter the path to the file
-rl.question("Enter the path to the file: ", async (path: string) => {
+rl.question("Enter the path or url to the file: ", async (path: string) => {
   try {
     // Processing the file using FileController and awaiting the result
     const data = await FileController.processFile(path);
