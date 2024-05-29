@@ -116,13 +116,14 @@ To use a file from Google Drive with the application, you need to obtain a URL t
 
 'node dist/app.js'
 
-'Enter the path to the file: https://drive.google.com/uc?export=download&id=1Rt8dCP6b7qnkT48GUu3YnL7pmiR0d8iO'
+Enter the path to the file: https://drive.google.com/uc?export=download&id=1Rt8dCP6b7qnkT48GUu3YnL7pmiR0d8iO
 
 ```
-Total Words: 52
-Total Letters: 431
-Total Spaces: 59
-Frequent Words:
+
+Parole totali: 52
+Lettere totali: 372
+Spazi totali: 59
+Parole frequenti:
 apple: 11
 banana: 13
 online: 12
@@ -150,13 +151,13 @@ To use a file from Dropbox with the application, you can obtain a URL that allow
 
 'node dist/app.js'
 
-'Enter the path to the file: https://www.dropbox.com/scl/fi/w7vsfe8jqc8hqify54g42/sample1online.txt?rlkey=mnyjxpn8rrgye0b6dwvz72g3n&st=7gn8avpx&dl=1'
+Enter the path to the file: https://www.dropbox.com/scl/fi/w7vsfe8jqc8hqify54g42/sample1online.txt?rlkey=mnyjxpn8rrgye0b6dwvz72g3n&st=7gn8avpx&dl=1
 
 ```
-Total Words: 38
-Total Letters: 255
-Total Spaces: 37
-Frequent Words:
+Parole totali: 38
+Lettere totali: 218
+Spazi totali: 37
+Parole frequenti:
 apple: 11
 banana: 13
 online: 12
