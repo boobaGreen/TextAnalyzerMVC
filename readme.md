@@ -338,8 +338,6 @@ To execute tests, run:
 npm run test
 ```
 
-This format provides a clear and structured guide to getting started with the application, ensuring all necessary steps and dependencies are covered.
-
 ---
 
 ## 📄 License
