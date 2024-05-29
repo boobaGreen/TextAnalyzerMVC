@@ -37,6 +37,8 @@
 >   - [🧪 Tests](#🧪-tests)
 > - [📄 License](#📄-license)
 
+---
+
 ## 📍 Overview
 
 ### Requests
