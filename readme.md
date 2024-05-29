@@ -2,11 +2,9 @@
   <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
 </p>
 <p align="center">
-    <h1 align="center">TEXTANALYZERMVC</h1>
+    <h1 align="center">TEXTANALYZER-MVC</h1>
 </p>
-<p align="center">
-    <em>HTTP error 401 for prompt `slogan`</em>
-</p>
+
 <p align="center">
 	<img src="https://img.shields.io/github/license/boobaGreen/TextAnalyzerMVC?style=flat&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/boobaGreen/TextAnalyzerMVC?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
