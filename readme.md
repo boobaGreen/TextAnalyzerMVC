@@ -25,17 +25,17 @@
 
 ## Quick Links
 
-> - [📍 Overview](#overview)
-> - [📦 Features](#features)
-> - [📂 Repository Structure](#repository-structure)
-> - [🧩 Modules](#modules)
-> - [🛠 MVC Architecture](#mvc-architecture)
-> - [🚀 Getting Started](#getting-started)
->   - [⚙️ Installation](#installation)
->   - [🤝 Typescript compile](#typescript-compile)
->   - [👏 Running TextAnalyzerMVC](#running-textanalyzermvc)
->   - [🧪 Tests](#tests)
-> - [📄License](#license)
+> - [📍 Overview](#📍-overview)
+> - [📦 Features](#📦-features)
+> - [📂 Repository Structure](#📂-repository-structure)
+> - [🧩 Modules](#🧩-modules)
+> - [🛠 MVC Architecture](🛠-mvc-architecture)
+> - [🚀 Getting Started](#🚀-getting-started)
+>   - [⚙️ Installation](#⚙️-installation)
+>   - [🤝 Typescript compile](#🤝-typescript-compile)
+>   - [👏 Running TextAnalyzerMVC](#👏-running-textanalyzermvc)
+>   - [🧪 Tests](#🧪-tests)
+> - [📄License](#📄-license)
 
 ---
 
@@ -332,7 +332,7 @@ Use the following command to run:
 node dist/main.js
 ```
 
-### Tests
+### 🧪 Tests
 
 To execute tests, run:
 
@@ -344,7 +344,7 @@ This format provides a clear and structured guide to getting started with the ap
 
 ---
 
-## License
+## 📄 License
 
 This project is protected under the [MIT License](https://opensource.org/licenses/MIT). For more details, refer to the [LICENSE](https://opensource.org/licenses/MIT) file.
 
@@ -353,3 +353,4 @@ This project is protected under the [MIT License](https://opensource.org/license
 [**Return**](#quick-links)
 
 ---
+
