@@ -55,7 +55,7 @@
 
 During the development of the application, several decisions had to be made to ensure proper functionality and compliance with requirements. Here are some of the key choices made:
 
-- Inclusion of Special Characters and Emojis: We decided to include special characters, such as emojis and symbols, in the word count. This choice reflects the modern use of texts and ensures an accurate representation of the text.
+- Inclusion of Special Characters Numbers and Emojis: We decided to include special characters, such as emojis and symbols, in the word count. This choice reflects the modern use of texts and ensures an accurate representation of the text.
 - Word Counting Method: We implemented an algorithm to count words in the text, including consecutive spaces. This approach provides an accurate measurement of the number of words and total spaces.
 - Counting Repeated Words: We developed an algorithm to identify and count words that repeat more than 10 times (but not exactly 10 times) in the text. This allows us to identify the most common and meaningful words in the text.
 - Consideration of Upper and Lowercase Words as Equal: We decided to consider uppercase and lowercase words as equivalent in the count of repeated words. This ensures proper identification of repeated words regardless of their formatting.
@@ -351,6 +351,6 @@ This project is protected under the [MIT License](https://opensource.org/license
 
 ---
 
-[**Return**](#-quick-links)
+[**Return**](#quick-links)
 
 ---
