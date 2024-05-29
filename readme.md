@@ -27,7 +27,7 @@
 
 > - [📍 Overview](#📍-overview)
 > - [📦 Features](#📦-features)
-> - [📂 Repository Structure](#📂 -repository-structure)
+> - [📂 Repository Structure](#📂-repository-structure)
 > - [🧩 Modules](#🧩-modules)
 > - [🛠 MVC Architecture](#🛠-mvc-architecture)
 > - [🚀 Getting Started](#🚀-getting-started)
