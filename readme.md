@@ -25,19 +25,17 @@
 
 ## Quick Links
 
-> - [📍 Overview](#overview)
-> - [📦 Features](#features)
-> - [📂 Repository Structure](#repository-structure)
-> - [🧩 Modules](#modules)
-> - [🛠 MVC Architecture](#mvc-architecture)
-> - [🚀 Getting Started](#getting-started)
->   - [⚙️ Installation](#installation)
->   - [🤝 Typescript compile](#typescript-compile)
->   - [👏 Running TextAnalyzerMVC](#running-textanalyzermvc)
->   - [🧪 Tests](#tests)
-> - [📄License](#license)
-
----
+> - [📍 Overview](#📍-overview)
+> - [📦 Features](#📦-features)
+> - [📂 Repository Structure](#📂 -repository-structure)
+> - [🧩 Modules](#🧩-modules)
+> - [🛠 MVC Architecture](#🛠-mvc-architecture)
+> - [🚀 Getting Started](#🚀-getting-started)
+>   - [⚙️ Installation](#⚙️-installation)
+>   - [🤝 Typescript compile](#🤝-typescript-compile)
+>   - [👏 Running TextAnalyzerMVC](#👏-running-textanalyzermvc)
+>   - [🧪 Tests](#🧪-tests)
+> - [📄 License](#📄-license)
 
 ## 📍 Overview
 
@@ -72,7 +70,7 @@ During the development of the application, several decisions had to be made to e
 
 ## 📦 Features
 
-## File Path Usage
+### File Path Usage
 
 When using the application to analyze a file, you can specify the file path in various ways, depending on its location in the system's folder structure.
 
@@ -90,7 +88,7 @@ If the file is in a different folder than the application, you need to provide t
 - **File in a Different Folder**: If the file `report.txt` is in the `documents` folder, you can specify it as `./documents/report.txt`.
 - **Combined Paths**: If the file is in a subfolder of `documents`, for example `documents/reports`, you can specify it as `./documents/reports/report.txt`.
 
-## URL File Usage
+### URL File Usage
 
 When you want to analyze a file from a remote source, such as a website or a cloud storage service, you can use a URL to access it. The application is capable of reading files from URLs that start with "http".
 
