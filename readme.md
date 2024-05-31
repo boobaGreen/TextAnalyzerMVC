@@ -329,7 +329,7 @@ tsc
 Use the following command to run:
 
 ```sh
-node dist/main.js
+node dist/app.js
 ```
 
 ### 🧪 Tests
